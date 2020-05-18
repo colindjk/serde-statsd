@@ -1,23 +1,19 @@
+use serde::{ Serialize, Deserialize };
 
-#[derive(Debug, PartialEq)]
-#[allow(dead_code)]
+#[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct Metric {
     name: String,
     value: f64,
     kind: MetricKind,
 }
 
-#[derive(Debug, PartialEq)]
-#[allow(dead_code)]
+#[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub enum MetricKind {
-    Counter(f64), // TODO: What level of precision is needed for this?
+    Counter(f64),
     Gauge,
     Timer,
 
-    // Not sure if I need these
     Histogram,
     Meter,
-
-    Unimplemented, // Temporary variant for testing
 }
 

@@ -1,15 +1,16 @@
 
-mod metric;
+pub mod metric;
 
+pub use metric::Metric;
 
 #[cfg(test)]
 mod tests {
     use crate::metric::*;
 
     #[test]
-    fn it_works() {
+    fn metric_size() {
         assert_eq!(16, std::mem::size_of::<MetricKind>());
-        assert_eq!(16, std::mem::size_of::<Metric>());
+        assert_eq!(48, std::mem::size_of::<Metric>());
     }
 }
 
