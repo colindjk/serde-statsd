@@ -1,0 +1,13 @@
+[package]
+name = "serde-statsd"
+version = "0.1.0"
+authors = ["Colin Kirkpatrick <colindjk@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "1.0"
+itoa = { version = "0.4.3", default-features = false }
+ryu = "1.0"
+
