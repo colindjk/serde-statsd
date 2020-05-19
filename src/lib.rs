@@ -2,6 +2,7 @@
 pub mod metric;
 
 pub use metric::Metric;
+pub use metric::MetricKind;
 
 #[cfg(test)]
 mod tests {
